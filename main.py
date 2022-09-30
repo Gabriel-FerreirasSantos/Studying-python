@@ -2,14 +2,18 @@
 
 #Regras Da parte de criar conta
 
-def Regrasnome(): 
-    nome = str(input('Seu nome :'))
-    nome = nome.replace('', ' ')
-    if len(nome) > 2:
-        print('Seu nome está muito grande refaça ele novamente')
-        pass
+def Regrasnome():
+    while True: 
+        nome = str(input('Seu nome :'))
+        nome = nome.replace('', ' ')
+        if len(nome) > 8:
+            print('Seu nome está muito grande refaça ele novamente')
+            pass
+        break
+        
 
 def Regrasnick():
+    nick = str(input('Qual nick você deseja :'))
     nick = nick.replace('', ' ').strip()
 
 def Regrasemail():
@@ -54,13 +58,10 @@ while True:
     if escolha == 1:
         while True:
         
-                Regrasnome()
-            
-                nick = str(input('Crie seu Nick Name :'))
-                email = str(input('Seu Email :'))
-                senha = str(input('Crie uma Senha :'))
-
-                break
+            Regrasnome()
+            Regrasnick()
+                
+            break
 
 
 
