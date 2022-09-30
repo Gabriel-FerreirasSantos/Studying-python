@@ -7,7 +7,7 @@
 
 # Informações
 ## Para que serve ou o que é?
-    *
+    #### Programa para fins de aprendizagens, dentro dele você poderá criar conta e acessar em sua conta, pois, seus dados estarão guardados
 ## Objetivo
     * Projeto treino
 
