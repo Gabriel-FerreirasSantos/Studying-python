@@ -27,7 +27,7 @@ while True:
 
     if escolha == '1': # criar conta
         while True:
-            main_func_nome()
+            main_func_nome.Regrasnome()
             clear()              
             break
 
