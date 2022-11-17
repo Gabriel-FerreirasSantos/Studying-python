@@ -21,7 +21,6 @@ while True:
             clear()              
             break
 
-
     elif escolha == '2': # aqui é para acessar a conta logo apos criada
         clear()
         pass
@@ -29,3 +28,21 @@ while True:
     elif escolha == '3': # se a variavel for igual a escola 3 que é fechar o programa
         clear()
         break
+
+    else: # Caso não passe por nenhuma das verificações a cima
+        clear()
+        print('Esse numero não existe deseja voltar? (s/n)')
+        voltar = str(input('')).upper()
+        
+        if voltar == 'S':
+            pass
+
+        elif voltar == 'N':
+            clear()
+            print('Volte sempre!')
+            break
+
+        else:
+            clear()
+            print('Escreva direito!')
+            break
