@@ -1,6 +1,12 @@
 #import's
 from replit import clear
 
+#dicionario
+dicionario_nome = {''}
+dicionario_nick = {''}
+dicionario_email = {''}
+dicionario_senha = {''}
+
 
 #Programa principal
 
