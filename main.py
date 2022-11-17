@@ -1,6 +1,6 @@
 #import's
 from replit import clear
-from func.func_nome import main_func_nome
+from func.func_nome import main_func_nome 
 from func.func_nick import main_func_nick
 from func.func_email import main_func_email
 from func.func_senha import main_func_senha
@@ -27,7 +27,7 @@ while True:
 
     if escolha == '1': # criar conta
         while True:
-            main_func_nome.Regrasnome()         
+            main_func_nome.Regrasnome()
             break
 
     elif escolha == '2': # aqui é para acessar a conta logo apos criada
