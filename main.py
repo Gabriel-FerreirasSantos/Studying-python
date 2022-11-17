@@ -1,15 +1,21 @@
 #import's
 from replit import clear
 
+
+
+#dicionarios & lista
+
+
+
 #Regras Da parte de criar conta
 def Regrasnome():
     while True: 
         nome = str(input('Seu nome :'))
         nome = nome.replace('', ' ')
-        if len(nome) > 8:
-            clear()
+        if len(nome) > 10:
             print('Seu nome está muito grande refaça ele novamente')
-        break
+        else:
+            break
             
         
 
