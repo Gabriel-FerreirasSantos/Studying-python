@@ -1,7 +1,7 @@
-#Programa de criar uma conta
+#import's
+from replit import clear
 
 #Regras Da parte de criar conta
-
 def Regrasnome():
     while True: 
         nome = str(input('Seu nome :'))
@@ -26,6 +26,7 @@ def Regrassenha():
 #Programa principal
 
 while True:
+    clear()
     print('-=' * 25)
     print(' ' * 10, 'Bem vindo ao painel da Takern')
     print('-=' * 25)
@@ -33,31 +34,24 @@ while True:
     print('[1] Criar conta')
     print('[2] Entrar em uma conta')
     print('[3] Fechar o programa')
+    a = True
+    while a == True:
+        escolha = str(input('R:'))
+        escolha = escolha.replace('', ' ').strip() #tirar todos os espaços
 
-    escolha = str(input(''))
-    escolha = escolha.replace('', ' ').strip()
+        if not escolha.isnumeric(): #verificação para ver se não é numerica a variavel
+            print('Você não digitou um número')
+            print('Você precisa digitar um número!')
+            voltar = str(input('R:'))
+            a = False
 
-
-    if not escolha.isnumeric():
-        print('Você não digitou um número')
-        print('Você precisa digitar um número!')
-        print('Esse numero não existe deseja voltar? (s/n)')
-        voltar = str(input('')).strip().lower().replace('', ' ') 
-        if voltar == 's':
-            pass
-        elif voltar == 'n':
-            print('Volte sempre!')
-            break
-        else:
-            print('Escreva direito!')
-            break
         
         
-    escolha = int(escolha)
+    escolha = int(escolha) #transforma variavel que estava em str para int
 
-    if escolha == 1:
+    if escolha == 1: # criar conta
         while True:
-        
+            clear()
             Regrasnome()
             Regrasnick()
                 
@@ -65,13 +59,18 @@ while True:
 
 
 
-    elif escolha == 2:
+    elif escolha == 2: # aqui é para acessar a conta logo apos criada
+        clear()
         pass
 
-    elif escolha == 3:
+
+
+    elif escolha == 3: # se a variavel for igual a escola 3 que é fechar o programa
+        clear()
         break
 
-    else:
+    else: # Caso não passe por nenhuma das verificações a cima
+        clear()
         print('Esse numero não existe deseja voltar? (s/n)')
         voltar = str(input('')).upper()
         
