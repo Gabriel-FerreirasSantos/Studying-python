@@ -1,5 +1,9 @@
 #import's
 from replit import clear
+from func.func_nome import main_func_nome
+from func.func_nick import main_func_nick
+from func.func_email import main_func_email
+from func.func_senha import main_func_senha
 
 #dicionario
 dicionario_nome = {''}
@@ -9,7 +13,6 @@ dicionario_senha = {''}
 
 
 #Programa principal
-
 while True:
     clear()
     print('-=' * 25)
@@ -24,6 +27,7 @@ while True:
 
     if escolha == '1': # criar conta
         while True:
+            main_func_nome()
             clear()              
             break
 
