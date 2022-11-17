@@ -20,3 +20,9 @@ while True:
         while True:
             clear()              
             break
+
+
+    elif escolha == '2': # aqui é para acessar a conta logo apos criada
+        clear()
+        pass
+
