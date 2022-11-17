@@ -2,9 +2,6 @@
 from replit import clear
 
 
-
-
-
 #Programa principal
 
 while True:
