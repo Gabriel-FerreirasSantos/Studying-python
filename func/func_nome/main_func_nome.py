@@ -3,6 +3,7 @@ from replit import clear
 
 def Regrasnome():
     while True: 
+        clear()
         nome = str(input('Seu nome :'))
         nome = nome.replace('', ' ')
         if len(nome) > 15:
