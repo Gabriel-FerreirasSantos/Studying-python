@@ -26,3 +26,6 @@ while True:
         clear()
         pass
 
+    elif escolha == '3': # se a variavel for igual a escola 3 que é fechar o programa
+        clear()
+        break
