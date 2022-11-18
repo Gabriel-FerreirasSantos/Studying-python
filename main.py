@@ -28,14 +28,14 @@ while True:
     if escolha == '1': # criar conta
         clear()
         while True: 
-            nome = str(input('Seu nome :'))
+            nome = str(input('Seu nome :')).strip()
             nome = nome.replace('', ' ')
             if len(nome) > 15:
                 clear()
                 print('Seu nome está muito grande refaça ele novamente')
             else: 
                 lista_nome = nome
-                print(lista_nome)
+                print(lista_nome.strip())
                 b = input('')
 
     elif escolha == '2': # aqui é para acessar a conta logo apos criada
