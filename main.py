@@ -6,10 +6,10 @@ from func.func_email import main_func_email
 from func.func_senha import main_func_senha
 
 #dicionario
-lista_nome = ()
-lista_nick = ()
-lista_email = ()
-lista_senha = ()
+lista_nome = {'nome' : ''}
+lista_nick = {'nick' : ''}
+lista_email = {'email' : ''}
+lista_senha = {'senha' : ''}
 
 
 #Programa principal
@@ -26,12 +26,12 @@ while True:
     escolha = escolha.replace('', ' ').strip() #tirar todos os espaços
 
     if escolha == '1': # criar conta
-        clear()
+        
         while True: 
             nome = str(input('Seu nome :')).strip()
             nome = nome.replace('', ' ')
             if len(nome) > 15:
-                clear()
+                
                 print('Seu nome está muito grande refaça ele novamente')
             else: 
                 lista_nome = nome
