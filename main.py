@@ -5,7 +5,9 @@ from func.func_nick import main_func_nick
 from func.func_email import main_func_email
 from func.func_senha import main_func_senha
 
-#dicionario
+#dicionario & lista
+lista_espaço = (' ', '')
+
 lista_nome = {'nome' : ''}
 lista_nick = {'nick' : ''}
 lista_email = {'email' : ''}
@@ -26,17 +28,21 @@ while True:
     escolha = escolha.replace('', ' ').strip() #tirar todos os espaços
 
     if escolha == '1': # criar conta
-        
+        clear()
         while True: 
-            nome = str(input('Seu nome :')).strip()
-            nome = nome.replace('', ' ')
-            if len(nome) > 15:
-                
+            nome = str(input('Seu nome :')).strip()       
+            if len(nome) > 15 or nick in lista_espaço:
+                clear()
                 print('Seu nome está muito grande refaça ele novamente')
             else: 
                 lista_nome = nome
-                print(lista_nome.strip())
-                b = input('')
+                
+            nick = str(input('Seu nome :')).strip()       
+            if len(nick) > 20 or nick in lista_espaço:
+                clear()
+                print('Seu nick está muito grande refaça ele novamente')
+            else: 
+                lista_nick = nick
 
     elif escolha == '2': # aqui é para acessar a conta logo apos criada
         clear()
