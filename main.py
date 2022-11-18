@@ -1,15 +1,15 @@
 #import's
 from replit import clear
-from func.func_nome import main_func_nome 
+from func.func_nome import main_func_nome
 from func.func_nick import main_func_nick
 from func.func_email import main_func_email
 from func.func_senha import main_func_senha
 
 #dicionario
-dicionario_nome = {''}
-dicionario_nick = {''}
-dicionario_email = {''}
-dicionario_senha = {''}
+lista_nome = ()
+lista_nick = ()
+lista_email = ()
+lista_senha = ()
 
 
 #Programa principal
@@ -26,9 +26,17 @@ while True:
     escolha = escolha.replace('', ' ').strip() #tirar todos os espaços
 
     if escolha == '1': # criar conta
-        while True:
-            main_func_nome.Regrasnome()
-            break
+        clear()
+        while True: 
+            nome = str(input('Seu nome :'))
+            nome = nome.replace('', ' ')
+            if len(nome) > 15:
+                clear()
+                print('Seu nome está muito grande refaça ele novamente')
+            else: 
+                lista_nome = nome
+                print(lista_nome)
+                b = input('')
 
     elif escolha == '2': # aqui é para acessar a conta logo apos criada
         clear()

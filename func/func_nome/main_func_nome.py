@@ -2,9 +2,9 @@
 from replit import clear
 
 def Regrasnome():
+    clear()
     while True: 
-        clear()
-        nome = str(input('Seu nome :'))
+        nome = str(input('Seu nome de usuário :'))
         nome = nome.replace('', ' ')
         if len(nome) > 15:
             clear()
