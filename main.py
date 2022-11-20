@@ -24,32 +24,33 @@ while True:
     escolha = escolha.replace('', ' ').strip() #tirar todos os espaços
 
     if escolha == '1': # criar conta
-        clear()
+        
         a = True
         b = True
         c = True
         d = True
-        if a == True:
-            while True: 
-                nome = str(input('Seu nome :')).strip()       
-                if len(nome) > 15 or nome in lista_espaço:
-                    clear()
-                    print('Seu nome está muito grande refaça ele novamente')
-                else: 
-                    lista_nome = nome
-                    a = False
-                    pass
-                
-        elif b == True and a == False:
-            while True: 
-                nome = str(input('Seu nick :')).strip()       
-                if len(nome) > 15 or nome in lista_espaço:
-                    clear()
-                    print('Seu nick está muito grande refaça ele novamente')
-                else: 
-                    lista_nome = nome
-                    b = False
-                    pass
+        while True:
+            if a == True:
+                while True: 
+                    nome = str(input('Seu nome :')).strip()       
+                    if len(nome) > 15 or nome in lista_espaço:
+                        clear()
+                        print('Seu nome está muito grande refaça ele novamente')
+                    else: 
+                        lista_nome = nome
+                        a = False
+                        pass
+
+            elif b == True and a == False:
+                while True: 
+                    nome = str(input('Seu nick :')).strip()       
+                    if len(nome) > 15 or nome in lista_espaço:
+                        clear()
+                        print('Seu nick está muito grande refaça ele novamente')
+                    else: 
+                        lista_nome = nome
+                        b = False
+                        pass
 
 
 
