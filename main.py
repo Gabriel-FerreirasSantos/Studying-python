@@ -29,13 +29,20 @@ while True:
 
     if escolha == '1': # criar conta
         clear()
-        while True: 
-            nome = str(input('Seu nome :')).strip()       
-            if len(nome) > 15 or nome in lista_espaço:
-                clear()
-                print('Seu nome está muito grande refaça ele novamente')
-            else: 
-                lista_nome = nome
+        a = True
+        b = True
+        c = True
+        d = True
+        if a == True:
+            while True: 
+                nome = str(input('Seu nome :')).strip()       
+                if len(nome) > 15 or nome in lista_espaço:
+                    clear()
+                    print('Seu nome está muito grande refaça ele novamente')
+                else: 
+                    lista_nome = nome
+
+
 
 
 
