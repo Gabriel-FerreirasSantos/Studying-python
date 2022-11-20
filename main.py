@@ -5,7 +5,7 @@ from replit import clear
 lista_espaço = (' ', '')
 regra_caractere = ('"', "'", '!', '$', '#', '¨', '&', '*', '(', ')', '{', '}', '[', ']', '-', '_' , '=', '+', '§', '´', '`', 'ª', 'º', '<', '>', '|', ':', ';')
 regra_senha = ('"', "'", '$', '¨', '&', '(', ')', '{', '}', '[', ']', '-', '_' , '=', '+', '§', '´', '`', 'ª', 'º', '<', '>', '|', ':', ';')
-regra_email = ('@')
+regra_email1 = ('@', 'com')
 
 lista_nome = {'nome' : ''}
 lista_nick = {'nick' : ''}
@@ -62,12 +62,16 @@ while True:
                         clear()
                         print('Seu email está muito grande refaça ele novamente')
 
+                    elif len(email) < 1:
+                        print('Você nao digitou nada tente novamente!')
+                        error = input('')
+
                     elif email in regra_caractere:
                         print('Você colocou caracteres estranhos tente novamente!')
                         error = input('')
 
-                    elif email not in regra_email:
-                        print('Está faltandando o @ tente novamente!')
+                    elif email not in regra_email1:
+                        print('Seu email está incorreto, faltando algo!')
                         error = input('')
 
                     else: 
