@@ -63,7 +63,16 @@ while True:
                         c = False
                         break
             
-        
+            elif d == True and c == False:
+                while True: 
+                    senha = str(input('Seu senha :')).strip()       
+                    if len(senha) > 15 or senha in lista_espaço:
+                        clear()
+                        print('Seu senha está muito grande refaça ele novamente')
+                    else: 
+                        lista_senha = senha 
+                        d = False
+                        break
 
 
 
