@@ -1,9 +1,5 @@
 #import's
 from replit import clear
-from func.func_nome import main_func_nome
-from func.func_nick import main_func_nick
-from func.func_email import main_func_email
-from func.func_senha import main_func_senha
 
 #dicionario & lista
 lista_espaço = (' ', '')
