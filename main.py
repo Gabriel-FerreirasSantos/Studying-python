@@ -31,13 +31,13 @@ while True:
         clear()
         while True: 
             nome = str(input('Seu nome :')).strip()       
-            if len(nome) > 15 or nick in lista_espaço:
+            if len(nome) > 15 or nome in lista_espaço:
                 clear()
                 print('Seu nome está muito grande refaça ele novamente')
             else: 
                 lista_nome = nome
                 
-            nick = str(input('Seu nome :')).strip()       
+            nick = str(input('Seu nick :')).strip()       
             if len(nick) > 20 or nick in lista_espaço:
                 clear()
                 print('Seu nick está muito grande refaça ele novamente')
