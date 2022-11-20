@@ -3,9 +3,9 @@ from replit import clear
 
 #dicionario & lista
 lista_espaço = (' ', '')
-regra_caractere = ('"', "'", '!', '$', '#', '¨', '&', '*', '(', ')', '{', '}', '[', ']', '-', '_' , '=', '+', '§', '´', '`', 'ª', 'º', '<', '>', '|', ':', ';')
-regra_senha = ('"', "'", '$', '¨', '&', '(', ')', '{', '}', '[', ']', '-', '_' , '=', '+', '§', '´', '`', 'ª', 'º', '<', '>', '|', ':', ';')
-regra_email1 = ('@', 'com')
+regra_caractere = ('"', "'", '!', '$', '%', '#', '¨', '&', '*', '(', ')', '{', '}', '[', ']', '-', '_' , '=', '+', '§', '´', '`', 'ª', 'º', '<', '>', '|', ':', ';')
+regra_senha = ('@', "!", '$', '&', '%')
+regra_email1 = ('@', '.com')
 
 lista_nome = {'nome' : ''}
 lista_nick = {'nick' : ''}
@@ -35,53 +35,80 @@ while True:
         while d == True:
             if a == True:
                 while True: 
-                    nome = str(input('Seu nome :')).strip()       
-                    if len(nome) > 15 or nome in lista_espaço:
+                    nome = str(input('Seu nome :')).strip().upper()   
+                    if len(nome) > 15:
                         clear()
                         print('Seu nome está muito grande refaça ele novamente')
+
+                    elif len(nome) < 3:
+                        print('Seu nome está muito curto')
+                    
+                    elif nome in lista_espaço:
+                        print('Seu nome contem espaços evite-os')
+
+                    elif nome in regra_caractere:
+                        print('Seu nome contem caractere evite-os')
+
                     else: 
                         lista_nome = nome
                         a = False
                         break
 
+
+
             elif b == True and a == False:
                 while True: 
-                    nick = str(input('Seu nick :')).strip()       
-                    if len(nick) > 15 or nick in lista_espaço:
+                    nick = str(input('Seu nick :')).strip().upper()    
+                    if len(nick) > 15:
                         clear()
                         print('Seu nick está muito grande refaça ele novamente')
+
+                    elif len(nick) < 3:
+                        print('Seu nick está muito curto')
+
+                    elif nick in lista_espaço:
+                        print('Seu nick tem espaço, evite espaços!')
+
+                    elif nome == nick:
+                        print('Seu nome não pode ser igual a seu nick, troque!')
+
+                    elif nick in regra_caractere:
+                        print('Seu nick contem caracteres que não pode ser usados!')
+
                     else: 
                         lista_nick = nick
                         b = False
                         break
 
+
+
             elif c == True and b == False:
                 while True: 
-                    email = str(input('Seu email :')).strip()       
+                    email = str(input('Seu email :')).strip().upper()    
                     if len(email) > 35 or email in lista_espaço:
                         clear()
                         print('Seu email está muito grande refaça ele novamente')
 
                     elif len(email) < 1:
                         print('Você nao digitou nada tente novamente!')
-                        error = input('')
 
                     elif email in regra_caractere:
                         print('Você colocou caracteres estranhos tente novamente!')
-                        error = input('')
 
                     elif email not in regra_email1:
                         print('Seu email está incorreto, faltando algo!')
-                        error = input('')
 
                     else: 
                         lista_email = email
                         c = False
                         break
+
+
+
             
             elif d == True and c == False:
                 while True: 
-                    senha = str(input('Seu senha :')).strip()       
+                    senha = str(input('Seu senha :')).strip().upper()       
                     if len(senha) > 15 or senha in lista_espaço or senha in regra_senha:
                         clear()
                         print('Seu senha está muito grande refaça ele novamente')
