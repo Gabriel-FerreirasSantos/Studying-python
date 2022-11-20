@@ -43,16 +43,27 @@ while True:
 
             elif b == True and a == False:
                 while True: 
-                    nome = str(input('Seu nick :')).strip()       
-                    if len(nome) > 15 or nome in lista_espaço:
+                    nick = str(input('Seu nick :')).strip()       
+                    if len(nick) > 15 or nick in lista_espaço:
                         clear()
                         print('Seu nick está muito grande refaça ele novamente')
                     else: 
-                        lista_nome = nome
+                        lista_nick = nick
                         b = False
                         break
 
-
+            elif c == True and b == False:
+                while True: 
+                    email = str(input('Seu email :')).strip()       
+                    if len(email) > 15 or email in lista_espaço:
+                        clear()
+                        print('Seu email está muito grande refaça ele novamente')
+                    else: 
+                        lista_email = email
+                        c = False
+                        break
+            
+        
 
 
 
