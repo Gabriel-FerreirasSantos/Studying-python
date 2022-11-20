@@ -36,13 +36,8 @@ while True:
                 print('Seu nome está muito grande refaça ele novamente')
             else: 
                 lista_nome = nome
-                
-            nick = str(input('Seu nick :')).strip()       
-            if len(nick) > 20 or nick in lista_espaço:
-                clear()
-                print('Seu nick está muito grande refaça ele novamente')
-            else: 
-                lista_nick = nick
+
+
 
     elif escolha == '2': # aqui é para acessar a conta logo apos criada
         clear()
