@@ -5,7 +5,7 @@ from replit import clear
 lista_espaço = (' ', '')
 regra_caractere = ('"', "'", '!', '$', '#', '¨', '&', '*', '(', ')', '{', '}', '[', ']', '-', '_' , '=', '+', '§', '´', '`', 'ª', 'º', '<', '>', '|', ':', ';')
 regra_senha = ('"', "'", '$', '¨', '&', '(', ')', '{', '}', '[', ']', '-', '_' , '=', '+', '§', '´', '`', 'ª', 'º', '<', '>', '|', ':', ';')
-
+regra_email = ('@')
 
 lista_nome = {'nome' : ''}
 lista_nick = {'nick' : ''}
@@ -58,9 +58,18 @@ while True:
             elif c == True and b == False:
                 while True: 
                     email = str(input('Seu email :')).strip()       
-                    if len(email) > 15 or email in lista_espaço or email in regra_caractere:
+                    if len(email) > 35 or email in lista_espaço:
                         clear()
                         print('Seu email está muito grande refaça ele novamente')
+
+                    elif email in regra_caractere:
+                        print('Você colocou caracteres estranhos tente novamente!')
+                        error = input('')
+
+                    elif email not in regra_email:
+                        print('Está faltandando o @ tente novamente!')
+                        error = input('')
+
                     else: 
                         lista_email = email
                         c = False
@@ -75,6 +84,7 @@ while True:
                     else: 
                         lista_senha = senha 
                         d = False
+                        clear()
                         print('Conta criada com sucesso! Aperte qualquer botão para voltar')
                         botão = input("")
                         break
