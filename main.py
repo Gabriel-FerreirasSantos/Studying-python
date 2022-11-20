@@ -29,7 +29,7 @@ while True:
         b = True
         c = True
         d = True
-        while True:
+        while d == True:
             if a == True:
                 while True: 
                     nome = str(input('Seu nome :')).strip()       
@@ -39,7 +39,7 @@ while True:
                     else: 
                         lista_nome = nome
                         a = False
-                        pass
+                        break
 
             elif b == True and a == False:
                 while True: 
@@ -50,7 +50,7 @@ while True:
                     else: 
                         lista_nome = nome
                         b = False
-                        pass
+                        break
 
 
 
