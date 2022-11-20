@@ -3,6 +3,9 @@ from replit import clear
 
 #dicionario & lista
 lista_espaço = (' ', '')
+regra_caractere = ('"', "'", '!', '$', '#', '¨', '&', '*', '(', ')', '{', '}', '[', ']', '-', '_' , '=', '+', '§', '´', '`', 'ª', 'º', '<', '>', '|', ':', ';')
+regra_senha = ('"', "'", '$', '¨', '&', '(', ')', '{', '}', '[', ']', '-', '_' , '=', '+', '§', '´', '`', 'ª', 'º', '<', '>', '|', ':', ';')
+
 
 lista_nome = {'nome' : ''}
 lista_nick = {'nick' : ''}
@@ -55,7 +58,7 @@ while True:
             elif c == True and b == False:
                 while True: 
                     email = str(input('Seu email :')).strip()       
-                    if len(email) > 15 or email in lista_espaço:
+                    if len(email) > 15 or email in lista_espaço or email in regra_caractere:
                         clear()
                         print('Seu email está muito grande refaça ele novamente')
                     else: 
@@ -66,12 +69,14 @@ while True:
             elif d == True and c == False:
                 while True: 
                     senha = str(input('Seu senha :')).strip()       
-                    if len(senha) > 15 or senha in lista_espaço:
+                    if len(senha) > 15 or senha in lista_espaço or senha in regra_senha:
                         clear()
                         print('Seu senha está muito grande refaça ele novamente')
                     else: 
                         lista_senha = senha 
                         d = False
+                        print('Conta criada com sucesso! Aperte qualquer botão para voltar')
+                        botão = input("")
                         break
 
 
