@@ -23,6 +23,12 @@ while True:
     escolha = str(input('R:'))
     escolha = escolha.replace('', ' ').strip() #tirar todos os espaços
 
+    print(f'''{lista_email}
+    {lista_senha}
+    {lista_nick}
+    {lista_nome}
+    ''')
+
     if escolha == '1': # criar conta
         
         a = True
@@ -91,7 +97,7 @@ while True:
                     elif email in regra_caractere:
                         print('Você colocou caracteres estranhos tente novamente!')
 
-                    elif "#" not in email or "." not in email:
+                    elif "@" not in email or "." not in email:
                         print('Seu email está incorreto, faltando algo!')
 
                     else: 
@@ -125,32 +131,35 @@ while True:
                         break
 
 
-
-
     elif escolha == '2': # aqui é para acessar a conta logo apos criada
-        a = True
-        b = True
+        a2 = True
+        b2 = True
+        c2 = True
 
-        while d == True:
-            if a == True:
+        while c2 == True:
+            if a2 == True:
                 while True: 
                     email_digito = str(input('Digite seu email: ')).upper()
-                    if email_digito != lista_email:
-                        print('Email inexistente')
+                    if email_digito != email:
+                        print(f'Email inexistente {email}')
 
-                    elif email_digito == lista_email:
-                        a = False
+                    else:
+                        a2 = False
                         break
             
-            elif b == True and a == False:
+            elif b2 == True:
                 while True: 
                     senha_digito = str(input('Digite seu email: ')).upper()
                     if senha_digito != lista_senha:
                         print('Email inexistente')
 
-                    elif senha_digito == lista_senha:
-                        b = False
+                    else:
+                        b2 = False
                         break
+
+            elif a2 == False and b2 == False:
+                print(f'Bem-vindo {lista_nome}')
+                ads = input('')
 
     elif escolha == '3': # se a variavel for igual a escola 3 que é fechar o programa
         break
