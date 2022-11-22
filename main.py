@@ -105,7 +105,7 @@ while True:
             elif d == True and c == False:
                 while True: 
                     senha = str(input('Seu senha :')).strip().upper()       
-                    if len(senha) > 15 or senha in lista_espaço or senha in regra_senha:
+                    if len(senha) > 15:
                         print('Sua senha está muito grande refaça ele novamente')
 
                     elif len(senha) < 3:
@@ -116,7 +116,7 @@ while True:
 
                     elif senha in regra_caractere:
                         print('Você colocou caracteres estranhos tente novamente!')
-                        
+
                     else: 
                         lista_senha = senha 
                         d = False
