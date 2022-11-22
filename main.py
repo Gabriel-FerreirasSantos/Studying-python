@@ -128,7 +128,20 @@ while True:
 
 
     elif escolha == '2': # aqui é para acessar a conta logo apos criada
-        pass
+        a = True
+        b = True
+        c = True
+        d = True
+
+        while d == True:
+            if a == True:
+                while True: 
+                    nome_digito = str(input('Digite seu email: ')).upper()
+                    if nome_digito != lista_email:
+                        print('Email inexistente')
+                        
+                    elif nome_digito == lista_email:
+                        print(f'Bem vindo {lista_nome}')
 
     elif escolha == '3': # se a variavel for igual a escola 3 que é fechar o programa
         break
