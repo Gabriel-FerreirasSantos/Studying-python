@@ -95,7 +95,7 @@ while True:
                     elif email in regra_caractere:
                         print('Você colocou caracteres estranhos tente novamente!')
 
-                    elif email not in regra_email1:
+                    elif email in '#' and '.com':
                         print('Seu email está incorreto, faltando algo!')
 
                     else: 
