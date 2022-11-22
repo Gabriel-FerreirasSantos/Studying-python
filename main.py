@@ -106,8 +106,17 @@ while True:
                 while True: 
                     senha = str(input('Seu senha :')).strip().upper()       
                     if len(senha) > 15 or senha in lista_espaço or senha in regra_senha:
+                        print('Sua senha está muito grande refaça ele novamente')
+
+                    elif len(senha) < 3:
+                        print('Sua senha é muito pequena')
+                    
+                    elif senha in lista_espaço:
+                        print('Sua senha tem espaço, evite espaços!')
+
+                    elif senha in regra_caractere:
+                        print('Você colocou caracteres estranhos tente novamente!')
                         
-                        print('Seu senha está muito grande refaça ele novamente')
                     else: 
                         lista_senha = senha 
                         d = False
