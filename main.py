@@ -15,7 +15,6 @@ lista_senha = {'senha' : ''}
 
 #Programa principal
 while True:
-    clear()
     print('-=' * 25)
     print(' ' * 10, 'Bem vindo ao painel da Takern')
     print('-=' * 25)
