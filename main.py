@@ -37,7 +37,7 @@ while True:
                 while True: 
                     nome = str(input('Seu nome :')).strip().upper()   
                     if len(nome) > 15:
-                        clear()
+                        
                         print('Seu nome está muito grande refaça ele novamente')
 
                     elif len(nome) < 3:
@@ -60,7 +60,7 @@ while True:
                 while True: 
                     nick = str(input('Seu nick :')).strip().upper()    
                     if len(nick) > 15:
-                        clear()
+                        
                         print('Seu nick está muito grande refaça ele novamente')
 
                     elif len(nick) < 3:
@@ -86,7 +86,6 @@ while True:
                 while True: 
                     email = str(input('Seu email :')).strip().upper()    
                     if len(email) > 35 or email in lista_espaço:
-                        clear()
                         print('Seu email está muito grande refaça ele novamente')
 
                     elif len(email) < 1:
@@ -110,7 +109,7 @@ while True:
                 while True: 
                     senha = str(input('Seu senha :')).strip().upper()       
                     if len(senha) > 15 or senha in lista_espaço or senha in regra_senha:
-                        clear()
+                        
                         print('Seu senha está muito grande refaça ele novamente')
                     else: 
                         lista_senha = senha 
