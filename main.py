@@ -1,5 +1,3 @@
-#import's
-from replit import clear
 
 #dicionario & lista
 lista_espaço = (' ', '')
@@ -113,7 +111,6 @@ while True:
                     else: 
                         lista_senha = senha 
                         d = False
-                        clear()
                         print('Conta criada com sucesso! Aperte qualquer botão para voltar')
                         botão = input("")
                         break
@@ -122,15 +119,12 @@ while True:
 
 
     elif escolha == '2': # aqui é para acessar a conta logo apos criada
-        clear()
         pass
 
     elif escolha == '3': # se a variavel for igual a escola 3 que é fechar o programa
-        clear()
         break
 
     else: # Caso não passe por nenhuma das verificações a cima
-        clear()
         print('Esse numero não existe deseja voltar? (s/n)')
         voltar = str(input('')).upper()
         
@@ -138,11 +132,9 @@ while True:
             pass
 
         elif voltar == 'N':
-            clear()
             print('Volte sempre!')
             break
 
         else:
-            clear()
             print('Escreva direito!')
             break
