@@ -132,34 +132,43 @@ while True:
 
 
     elif escolha == '2': # aqui é para acessar a conta logo apos criada
-        a2 = True
-        b2 = True
-        c2 = True
 
-        while c2 == True:
-            if a2 == True:
-                while True: 
-                    email_digito = str(input('Digite seu email: ')).upper()
-                    if email_digito != email:
-                        print(f'Email inexistente {email}')
-
+        verificação = True
+        verificação2 = True
+        while verificação == True:
+            em_entrar = str(input('Digite seu email :')).upper()
+            if em_entrar == email or em_entrar == lista_email:
+                while verificação2 == True:
+                    senha_entrar = str(input('Digite sua senha :')).upper()
+                    if senha_entrar == senha or senha_entrar == lista_senha:
+                        print('Você Entrou!')
+                        i32 = input('')
+                        #programa
+                        verificação = False
+                        verificação2 = False
                     else:
-                        a2 = False
-                        break
+                        print('Sua senha está incorreta!')
+                        escolha = str(input('Deseja tentar novamente? (s/n) :')).upper()
+                        if escolha == 'S' or escolha == ' ':
+                            print('')
+                        elif escolha != 'S':
+                            verificação = False
+                            break
+                        else:
+                            verificação = False
+                            break
+            else:
+                print('Seu email não existe ou está incorreto!')
+                escolha = str(input('Deseja tentar novamente? (s/n) :')).upper()
+                if escolha == 'S' or escolha == ' ':
+                    print('')
+                elif escolha != 'S':
+                    verificação = False
+                    break
+                else:
+                    verificação = False
+                    break
             
-            elif b2 == True:
-                while True: 
-                    senha_digito = str(input('Digite seu email: ')).upper()
-                    if senha_digito != lista_senha:
-                        print('Email inexistente')
-
-                    else:
-                        b2 = False
-                        break
-
-            elif a2 == False and b2 == False:
-                print(f'Bem-vindo {lista_nome}')
-                ads = input('')
 
     elif escolha == '3': # se a variavel for igual a escola 3 que é fechar o programa
         break
