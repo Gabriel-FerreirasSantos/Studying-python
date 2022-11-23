@@ -23,12 +23,6 @@ while True:
     escolha = str(input('R:'))
     escolha = escolha.replace('', ' ').strip() #tirar todos os espaços
 
-    print(f'''{lista_email}
-    {lista_senha}
-    {lista_nick}
-    {lista_nome}
-    ''')
-
     if escolha == '1': # criar conta
         
         a = True
@@ -130,7 +124,6 @@ while True:
                         botão = input("")
                         break
 
-
     elif escolha == '2': # aqui é para acessar a conta logo apos criada
 
         verificação = True
@@ -143,7 +136,8 @@ while True:
                     if senha_entrar == senha or senha_entrar == lista_senha:
                         print('Você Entrou!')
                         i32 = input('')
-                        #programa
+                        #programa Trabalharei aqui daqui um tempo
+                        #por hora irei estudar
                         verificação = False
                         verificação2 = False
                     else:
