@@ -138,6 +138,7 @@ while True:
                         i32 = input('')
                         #programa Trabalharei aqui daqui um tempo
                         #por hora irei estudar
+                        #coisas novas
                         verificação = False
                         verificação2 = False
                     else:
